@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Train Scheduler</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Firebase Link -->
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+
+    <!-- Link to Moment.js should go here -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Google Font -->
+
+</head>
+
+
+<body>
+
+    <div class="container-fluid">
+        <!-- Jumbotron Heading -->
+        <div class="row">
+            <div class="jumbotron" id="trainHeader">
+                <h1 id="header">Train Schedules</h1>
+                <h3 id="currentDateTime"></h3>
+            </div>
+        </div>
+
+        <!-- Train Timetable -->
+        <div class="row">
+            <h3 id="scheduleHeader">Schedule</h3>
+            <div class="table-responsive">
+                <table class="table" id="trainTable">
+                    <thead>
+                        <tr>
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>Next Arrival</th>
+                            <th>Frequency (min)</th>
+                            <th>Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-hover"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Add Train Form -->
+        <div class="form">
+            <div class="form-group">
+                <form>
+                    <h3 id="addTrainHeader">Add Train</h3>
+                    <h4>Train Name: </h4>
+                    <input id="name-input" class="form-control" type="text" placeholder="Which train are you taking?">
+                    <h4>Destination: </h4>
+                    <input id="destination-input" class="form-control" type="text" placeholder="Where do you want to go?">
+                    <h4>First Train Time (HH:MM - military time): </h4>
+                    <input id="arrival-input" class="form-control" type="time" placeholder="When does it first arrive?">
+                    <h4>Frequency (min): </h4>
+                    <input id="frequency-input" class="form-control" type="number" placeholder="How often does it run?">
+                    <button class="btn btn-default" id="submitBtn" type='submit'>SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>

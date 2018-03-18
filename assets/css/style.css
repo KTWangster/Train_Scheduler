@@ -1,0 +1,38 @@
+.container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+
+/* HEADING */
+
+#trainHeader {
+    background-image: url("../images/trainHeader.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    height: 300px;
+    position: sticky;
+    background-position-y: -350px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-bottom: 0px;
+}
+
+#header,
+#currentDateTime {
+    color: #ffffff;
+}
+
+
+/* End: HEADING */
+
+#scheduleHeader,
+#addTrainHeader {
+    background-color: #012a66;
+    color: #ffffff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
