@@ -53,6 +53,7 @@ $(document).ready(function() {
         $("#destination-input").val("");
         $("#arrival-input").val("");
         $("#frequency-input").val("");
+        return false;
     });
 
 
@@ -75,10 +76,14 @@ $(document).ready(function() {
         // Shows difference between times using Unix timestamp.
         var diffTime = moment().diff(moment.unix(trainArrival), "minutes");
         var timeApart = moment().diff(moment.unix(trainArrival), "minutes") % trainFrequency;
+        var minutesAway = trainFrequency - timeApart
+        var trainArrival = moment().add(minutesAway, "m").format("hh:mm A");
 
         // Add Train data into table
         $("#trainTable > tbody").append("<tr><td>" + trainName + "</td><td>" +
             trainDestination + "</td><td>" + trainArrival +
-            "</td><td>" + trainFrequency + "</td><td>");
+            "</td><td>" + trainFrequency + "</td><td>" + minutesAway + "</td></tr>");
     });
+
+    //  window.onbeforeunload = function() { quit() };
 })

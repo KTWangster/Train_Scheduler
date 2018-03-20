@@ -19,11 +19,27 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #header,
 #currentDateTime {
     color: #ffffff;
+    margin-bottom: 0px;
+    margin-top: 180px;
+    text-align: left;
+}
+
+#currentDateTime {
+    text-align: right;
+    margin-top: -40px;
+    background: linear-gradient(to right, transparent, #012a66);
+    padding-right: 30px;
+    padding-left: 100px;
+    margin-left: 350px;
+    margin-right: -10px;
 }
 
 
@@ -35,4 +51,24 @@
     color: #ffffff;
     margin-top: 0px;
     margin-bottom: 0px;
+    padding-left: 10px;
+}
+
+#addTrainHeader {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+#submitBtn {
+    background-color: #012a66;
+    color: #ffffff
+}
+
+#submitBtn:hover {
+    background-color: #ffffff;
+    color: #012a66
+}
+
+th {
+    color: #012a66
 }
