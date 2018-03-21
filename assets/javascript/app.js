@@ -36,6 +36,9 @@ $(document).ready(function() {
             frequency: trainFrequency,
         }
 
+        // Push input to Firebase.
+        database.ref().push(newTrain);
+
         // Logs everything to console.
         console.log(newTrain.name);
         console.log(newTrain.destination);
@@ -71,7 +74,6 @@ $(document).ready(function() {
         console.log(trainFrequency);
 
 
-
         // Shows difference between times using Unix timestamp.
         var diffTime = moment().diff(moment.unix(trainArrival), "minutes");
         var timeApart = moment().diff(moment.unix(trainArrival), "minutes") % trainFrequency;
@@ -83,9 +85,11 @@ $(document).ready(function() {
             trainDestination + "</td><td>" + trainArrival +
             "</td><td>" + trainFrequency + "</td><td>" + minutesAway + "</td></tr>");
 
-        // Clears Firebase database when window is closed.
+        // Clears Firebase database.
         database.ref().onDisconnect().remove();
 
+
     });
+
 
 });
